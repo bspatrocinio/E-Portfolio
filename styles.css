@@ -144,6 +144,20 @@ nav {
     text-transform: uppercase;
 }
 
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    background-color: #C26DBC;
+}
+
 /*
 
 ABOUT ME
@@ -510,10 +524,53 @@ SMALL PHONES
 */
 
 @media (max-width: 480px) {
-    .nav__link:not(:last-child) {
+
+    .hidden {
         display: none;
     }
 
+    .nav__link--list {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #C8F4F9;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 300ms;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav__link--list.active {
+        left: 0;
+    }
+
+    .nav__link {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .about-me__info--container {
+        margin: 20px auto;
+    }
+    
     .project__description {
         padding: 0;
         left: 0;
