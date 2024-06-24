@@ -270,7 +270,7 @@ ABOUT ME
     animation: animate-wave 500ms infinite ease-in-out;
 }
 
-@keyframes animate-wave {
+/* @keyframes animate-wave {
     0% {
         transform: rotate(0);
     }
@@ -280,7 +280,7 @@ ABOUT ME
     100% {
         tranform: rotate(0);
     }
-}
+} */
 
 /*
 
@@ -524,10 +524,6 @@ SMALL PHONES
 */
 
 @media (max-width: 480px) {
-
-    .hidden {
-        display: none;
-    }
 
     .nav__link--list {
         position: fixed;

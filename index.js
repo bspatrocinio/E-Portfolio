@@ -1,14 +1,18 @@
+
+// Hamburger Menu
+
 const hamburger = document.querySelector(".hamburger");
 const  navMenu = document.querySelector(".nav__link--list");
-const handWave = document.querySelector(".wave");
 
 hamburger.addEventListener("click", mobileMenu);
 
 function mobileMenu() {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
-    handWave.classList.add("hidden");
+    document.querySelector(".wave").style.visbility = "hidden";
 }
+
+// When a link is clicked
 
 const navLink = document.querySelectorAll(".nav__link");
 
@@ -18,5 +22,3 @@ function closeMenu() {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
 }
-
-
